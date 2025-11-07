@@ -1,9 +1,5 @@
-/* 🌿 GIAO DIỆN MỚI – HÀI HÒA VÀ TỰ NHIÊN (Tông Màu Nhẹ Nhàng) */
-
-/* ========== SIDEBAR ========== */
 .sidebar {
     width: 250px;
-    /* CHỈNH SỬA: Dùng màu Indigo nhẹ nhàng hơn cho sidebar */
     background: linear-gradient(to bottom, #7e22ce, #63f182);
     color: white;
     position: fixed;
@@ -14,7 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 1.6rem;
-    box-shadow: 3px 0 15px rgba(0,0,0,0.15); /* Shadow đậm hơn một chút */
+    box-shadow: 3px 0 15px rgba(0,0,0,0.15); 
     animation: slideIn 0.4s ease;
 }
 
@@ -52,7 +48,6 @@
 
 /* ========== BUTTONS ========== */
 .btn-indigo {
-    /* CHỈNH SỬA: Màu Indigo nhẹ hơn và đồng nhất hơn */
     background: linear-gradient(to right, #818cf8, #6366f1);
     color: white;
     border-radius: 0.6rem;
@@ -68,7 +63,6 @@
 }
 
 .btn-green {
-    /* CHỈNH SỬA: Màu xanh lá cây nhẹ hơn */
     background: linear-gradient(to right, #34d399, #58e9b9);
     color: white;
     border-radius: 0.6rem;
@@ -78,7 +72,6 @@
 .btn-green:hover { transform: scale(1.05); opacity: 0.9; }
 
 .btn-red {
-    /* CHỈNH SỬA: Màu đỏ nhẹ hơn */
     background: linear-gradient(to right, #f87171, #e4ef44);
     color: white;
     border-radius: 0.6rem;
@@ -88,7 +81,6 @@
 .btn-red:hover { transform: scale(1.05); opacity: 0.9; }
 
 .btn-purple {
-    /* CHỈNH SỬA: Màu tím nhạt hơn */
     background: linear-gradient(to right, #a78bfa, #8b5cf6);
     color: white;
     border-radius: 0.6rem;
@@ -99,7 +91,6 @@
 .btn-purple:hover { transform: scale(1.05); opacity: 0.95; }
 
 .btn-gray {
-    /* CHỈNH SỬA: Màu xám sáng, tạo cảm giác nhẹ nhàng */
     background: #e5e7eb;
     color: #a8c6f5;
     padding: 0.55rem 1rem;
@@ -113,7 +104,6 @@
 .main-area {
     margin-left: 270px;
     padding: 2rem;
-    /* CHỈNH SỬA: Khung nền màu xám trắng nhẹ */
     background: linear-gradient(to bottom right, #f8f9fa, #ffffff);
     min-height: 100vh;
     transition: background 0.4s ease;
@@ -124,18 +114,17 @@
     background: white;
     border-radius: 1rem;
     padding: 1.5rem;
-    /* Shadow nhẹ hơn để tạo cảm giác "nổi" nhẹ nhàng */
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     animation: fadeIn 0.4s ease;
     transition: transform 0.3s ease;
-    border: 1px solid #f3f4f6; /* Thêm viền mỏng */
+    border: 1px solid #f3f4f6;
 }
 .card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.09); }
 
 .section-title {
     font-size: 1.35rem;
     font-weight: 700;
-    color: #4f46e5; /* Đổi màu tiêu đề sang tông Indigo chính */
+    color: #4f46e5;
     margin-bottom: 1rem;
     text-shadow: none;
 }
@@ -144,7 +133,7 @@
 #tree {
     width: 100%;
     height: 600px;
-    border: 2px dashed #a5b4fc; /* Màu viền nhạt hơn */
+    border: 2px dashed #a5b4fc;
     border-radius: 12px;
     background: #f3a760;
     transition: 0.3s;
@@ -157,7 +146,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.4); /* Độ tối giảm đi */
+    background: rgba(0,0,0,0.4); 
     justify-content: center;
     align-items: center;
     z-index: 50;
@@ -170,7 +159,7 @@
     padding: 1.5rem;
     border-radius: 1rem;
     width: 400px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Shadow nhẹ hơn */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     animation: popIn 0.3s ease;
     transform-origin: center;
 }
@@ -178,13 +167,13 @@
 .modal-title {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #4f46e5; /* Đổi màu tiêu đề modal */
+    color: #4f46e5;
     margin-bottom: 1rem;
 }
 
 .modal-label {
     font-weight: 500;
-    color: #4b5563; /* Màu chữ tối hơn một chút cho dễ đọc */
+    color: #4b5563;
     font-size: 0.95rem;
 }
 
@@ -193,11 +182,11 @@
     width: 100%;
     padding: 0.65rem 0.9rem;
     border-radius: 0.6rem;
-    border: 1px solid #e5e7eb; /* Viền sáng hơn */
+    border: 1px solid #e5e7eb;
     margin-bottom: 0.6rem;
     transition: 0.25s;
     outline: none;
-    background: #ffffff; /* Nền trắng */
+    background: #ffffff; 
 }
 .input-box:focus {
     border-color: #818cf8;

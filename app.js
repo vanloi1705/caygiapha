@@ -1,5 +1,3 @@
-// 🌳 Gia Phả Việt v4.0 (Phiên bản không có Nhập/Xuất JSON)
-
 let currentUser = null;
 let currentTreeName = "Cây mặc định";
 let members = [];
@@ -72,7 +70,6 @@ const login = () => {
   document.querySelector(".main-area").classList.remove("hidden");
 
   loadFamilyData();
-  // Dùng setTimeout để đảm bảo DOM được cập nhật trước khi FamilyTree vẽ cây
   setTimeout(initTree, 300); 
 };
 
@@ -120,7 +117,6 @@ const loadFamilyData = () => {
   const raw = localStorage.getItem(getFamilyKey());
   members = raw ? JSON.parse(raw) : [];
 
-  // Dữ liệu mẫu (Sample data) - Sẽ được tải nếu localStorage rỗng
   if (!members.length) {
     members = [
       // 1. THẾ HỆ ÔNG BÀ (Generation 1)
