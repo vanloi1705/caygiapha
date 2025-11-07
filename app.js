@@ -18,18 +18,45 @@ const toggleRegister = (show) => {
 };
 
 const register = () => {
-  const u = document.getElementById("newUser").value.trim();
-  const p = document.getElementById("newPass").value.trim();
-  if (!u || !p) return alert("⚠️ Vui lòng nhập đầy đủ thông tin!");
+  const fullName = document.getElementById("fullName").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const username = document.getElementById("newUser").value.trim();
+  const password = document.getElementById("newPass").value.trim();
+  const confirmPass = document.getElementById("confirmPass").value.trim();
+
+  if (!fullName || !email || !username || !password || !confirmPass) {
+    return alert("⚠️ Vui lòng nhập đầy đủ thông tin!");
+  }
+
+  if (password !== confirmPass) {
+    return alert("❌ Mật khẩu xác nhận không khớp!");
+  }
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
-  if (users.some(x => x.username === u)) return alert("❌ Tài khoản đã tồn tại!");
+  if (users.some(u => u.username === username)) {
+    return alert("❌ Tên đăng nhập đã tồn tại!");
+  }
+  if (users.some(u => u.email === email)) {
+    return alert("❌ Email đã được sử dụng!");
+  }
 
-  users.push({ username: u, password: p });
+  users.push({
+    fullName,
+    email,
+    username,
+    password,
+  });
   localStorage.setItem("users", JSON.stringify(users));
+
   alert("✅ Đăng ký thành công! Hãy đăng nhập.");
   toggleRegister(false);
+
+  // Xóa nội dung trong form
+  ["fullName", "email", "newUser", "newPass", "confirmPass"].forEach(id => {
+    document.getElementById(id).value = "";
+  });
 };
+
 
 const login = () => {
   const user = document.getElementById("username").value.trim();
